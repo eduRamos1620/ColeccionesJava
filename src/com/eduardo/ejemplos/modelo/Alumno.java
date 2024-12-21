@@ -1,5 +1,7 @@
 package com.eduardo.ejemplos.modelo;
 
+import java.util.Objects;
+
 public class Alumno implements Comparable<Alumno>{
     private String nombre;
     private int nota;
@@ -46,5 +48,18 @@ public class Alumno implements Comparable<Alumno>{
         }else {
             return -1;
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if(this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Alumno alumno = (Alumno) o;
+        return Objects.equals(nombre, alumno.nombre) && Objects.equals(nota, alumno.nota);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, nota);
     }
 }
