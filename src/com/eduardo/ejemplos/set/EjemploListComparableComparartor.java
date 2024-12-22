@@ -1,11 +1,8 @@
 package com.eduardo.ejemplos.set;
 
 import com.eduardo.ejemplos.modelo.Alumno;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+
+import java.util.*;
 
 public class EjemploListComparableComparartor {
     public static void main(String[] args) {
@@ -17,7 +14,9 @@ public class EjemploListComparableComparartor {
         sa.add(new Alumno("Toño", 4));
         sa.add(new Alumno("Lupe", 5));
         sa.add(new Alumno("Lupe", 5));
-
+        //Collections.sort(sa, (a, b) -> a.getNota().compareTo(b.getNota()));
+        //sa.sort((a, b) -> b.getNota().compareTo(a.getNota()));
+        sa.sort(Comparator.comparing((Alumno a) -> a.getNota()).reversed());
         System.out.println(sa);
 
         System.out.println("iterando usando Stream forEach ");

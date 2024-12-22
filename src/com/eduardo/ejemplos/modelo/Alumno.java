@@ -4,12 +4,12 @@ import java.util.Objects;
 
 public class Alumno implements Comparable<Alumno>{
     private String nombre;
-    private int nota;
+    private Integer nota;
 
     public Alumno(){
 
     }
-    public Alumno(String nombre, int nota){
+    public Alumno(String nombre, Integer nota){
         this.nombre = nombre;
         this.nota = nota;
     }
@@ -21,11 +21,11 @@ public class Alumno implements Comparable<Alumno>{
         this.nombre = nombre;
     }
 
-    public int getNota(){
+    public Integer getNota(){
         return nota;
     }
 
-    public void setNota(int nota) {
+    public void setNota(Integer nota) {
         this.nota = nota;
     }
     @Override
