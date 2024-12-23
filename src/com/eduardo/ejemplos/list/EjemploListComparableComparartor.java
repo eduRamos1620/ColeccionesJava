@@ -1,4 +1,4 @@
-package com.eduardo.ejemplos.set;
+package com.eduardo.ejemplos.list;
 
 import com.eduardo.ejemplos.modelo.Alumno;
 

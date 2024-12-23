@@ -1,10 +1,8 @@
-package com.eduardo.ejemplos.set;
+package com.eduardo.ejemplos.list;
 
 import com.eduardo.ejemplos.modelo.Alumno;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.ListIterator;
 
 public class EjemploLinkedList {
@@ -36,7 +34,7 @@ public class EjemploLinkedList {
         while (li.hasNext()){
             System.out.println(li.next());
         }
-        
+
         while (li.hasPrevious()){
             Alumno alumno = li.previous();
             System.out.println(alumno);
